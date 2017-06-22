@@ -46,7 +46,7 @@ class App extends Component {
                                 }).then(response => response.json())
                                         .then(json => {
                                                 console.log(json);
-                                                const {tracks} = json;
+                                                const {tracks} = json.topalbums['album'];
                                                 this.setState(tracks);
                                         });
 
@@ -73,7 +73,7 @@ class App extends Component {
                                 <div className="text-center Profile row">
                                        
                                         <div className="col-md-4 lead Artistpic">
-                                                <img className="avatar img-responsive img-circle" src={this.state.profilepic} alt='' />
+                                                <img className="img-responsive img-circle" src={this.state.profilepic} alt='' />
                                         </div>
                                          <div className="col-md-8 Artistname">
                                                 <h3 className="lead">{this.state.artist}</h3>
