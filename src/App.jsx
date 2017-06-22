@@ -1,8 +1,8 @@
 /*
  * @Author: Aswath MadhuBabu 
  * @Date: 2017-06-22 22:57:04 
- * @Last Modified by:   Aswath MadhuBabu 
- * @Last Modified time: 2017-06-22 22:57:04 
+ * @Last Modified by: Aswath MadhuBabu
+ * @Last Modified time: 2017-06-22 23:08:52
  */
 // import React from 'react';
 import React, { Component } from 'react';
@@ -50,7 +50,7 @@ class App extends Component {
 				playcount += ' (plays total)';
 				this.setState({ playcount });
 				// console.log(searchArtist.tags['tag']);
-				var albumURL = `http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${artist}&api_key=fc8abd6509fb7b91ba5628898494b3e6&format=json`;
+				var albumURL = `https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${artist}&api_key=fc8abd6509fb7b91ba5628898494b3e6&format=json`;
 				console.log(albumURL);
 				fetch(albumURL, {
 					method: 'GET'
@@ -101,8 +101,7 @@ class App extends Component {
 					<div className="col-md-4 col-md-offset-3">
 
 						<div className="form-group has-feedback">
-
-							<input type="text" className="form-control" name="search" id="search" placeholder="search" className="form-control text-center" placeholder="Enter Any Artist to search" required onChange={event => this.setState({ query: event.target.value })} onKeyPress={event => { if (event.key === 'Enter') this.search() } } />
+<input type="text" className="form-control" className="form-control text-center" placeholder="Enter Any Artist to search" required onChange={event => this.setState({ query: event.target.value })} onKeyPress={event => { if (event.key === 'Enter') this.search() } } />
 
 						</div>
 
@@ -134,7 +133,7 @@ class App extends Component {
 						<ul>
 							{
 								this.state.tracks.map(function (track, index) {
-									const previewurl = track.url;
+								
 									return <li className='well' key={index}> <img className="img-responsive imagealbum" src={track.image[0]['#text']} alt='' /><a href={track.url}>{track.name} </a></li>;
 								})}
 						</ul>
