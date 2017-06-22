@@ -90,7 +90,9 @@ class App extends Component {
                                         </div>
                                 </div>
 
-                                <div className="row Gallery">
+                                <div className="row Gallery col-md-12">
+                                <div className="col-md-2">
+                                </div>
                                         <ul>
                                                 {
                                                         this.state.tracks.map(function (track, index) {
