@@ -89,9 +89,11 @@ class App extends Component {
                                 </div>
 
                                 <div className="row Gallery">
-
-                                
-
+                                <ul>
+                                 {tracks.map(function(track, index){
+                                        return <li key={ index }>{track[index].name}</li>;
+                                        })}
+                                        </ul>
                                 </div>
                         </div>)
         };
