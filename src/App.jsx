@@ -94,7 +94,7 @@ class App extends Component {
                                         <ul>
                                                 {
                                                         this.state.tracks.map(function (track, index) {
-                                                        return <li key={index}>{track[index].playcount}</li>;
+                                                        return <li key={index}>{track[index]}</li>;
                                                 })}
                                         </ul>
                                 </div>
