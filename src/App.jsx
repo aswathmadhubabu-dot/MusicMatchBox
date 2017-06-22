@@ -124,11 +124,12 @@ class App extends Component {
 					</div>
 					<div className="col-md-8">
 
-
+						
 						<ul>
 							{
 								this.state.tracks.map(function (track, index) {
-									return <li className='well' key={index}> <img className="img-responsive imagealbum" src={track.image[0]['#text']} alt='' /><a href={track.url}>{track.name} </a><button className="btn btn-secondary text-right" onClick={() => this.playAudio(track.url)}><i className="fa fa-play"></i></button></li>;
+									const previewurl = track.url;
+									return <li className='well' key={index}> <img className="img-responsive imagealbum" src={track.image[0]['#text']} alt='' /><a href={track.url}>{track.name} </a><button className="btn btn-secondary text-right" onClick={() => this.playAudio(previewurl)}><i className="fa fa-play"></i></button></li>;
 								})}
 						</ul>
 					</div>
