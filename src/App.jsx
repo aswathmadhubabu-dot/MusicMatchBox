@@ -42,6 +42,13 @@ class App extends Component {
 
                         });
                 var albumURL = `http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${artist}&api_key=fc8abd6509fb7b91ba5628898494b3e6&format=json`;
+                fetch(albumURL,{
+                        method :'GET'
+                }).then(response => response.json())
+                        .then(json => {
+                                console.log("TOP ALBUMS "+json);
+                        });
+                            
         }
         render() {
                 return (
