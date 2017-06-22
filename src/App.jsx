@@ -14,7 +14,9 @@ class App extends Component {
                         description: null,
                         tracks: null
                 }
+                
         }
+        
         search() {
                 console.log(this.state.query);
                 var baseURL = `https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${this.state.query}&api_key=fc8abd6509fb7b91ba5628898494b3e6&format=json`;
@@ -90,8 +92,8 @@ class App extends Component {
 
                                 <div className="row Gallery">
                                         <ul>
-                                                {this.state.tracks.map(function (track, index) {
-                                                        return <li key={index}>{this.state.track[index].name}</li>;
+                                                {tracks.map(function (track, index) {
+                                                        return <li key={index}>{track[index].name}</li>;
                                                 })}
                                         </ul>
                                 </div>
