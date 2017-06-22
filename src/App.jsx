@@ -12,7 +12,7 @@ class App extends Component {
                         listeners: null,
                         playcount: null,
                         description: null,
-                        tracks: null
+                        tracks: []
                 }
                 
         }
@@ -92,7 +92,7 @@ class App extends Component {
 
                                 <div className="row Gallery">
                                         <ul>
-                                                {this.state.tracks.map(function (track, index) {
+                                                {tracks.map(function (track, index) {
                                                         return <li key={index}>{track[index].name}</li>;
                                                 })}
                                         </ul>
