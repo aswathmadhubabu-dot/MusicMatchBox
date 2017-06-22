@@ -61,7 +61,7 @@ class App extends Component {
                                                 <div className="form-group has-feedback">
 
                                                         <input type="text" className="form-control" name="search" id="search" placeholder="search" className="form-control text-center" placeholder="Enter Any Artist to search" required onChange={event => this.setState({ query: event.target.value })} onKeyPress={event => { if (event.key === 'Enter') this.search() } } />
-                                                        <span className="fa fa-1x fa-search form-control-feedback"></span>
+                                                        
                                                 </div>
 
                                         </div>
