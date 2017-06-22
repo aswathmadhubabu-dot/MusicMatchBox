@@ -12,7 +12,7 @@ class App extends Component {
                         listeners: null,
                         playcount: null,
                         description: null,
-                        tracks:null
+                        tracks: null
                 }
         }
         search() {
@@ -65,22 +65,25 @@ class App extends Component {
                                                 <div className="form-group has-feedback">
 
                                                         <input type="text" className="form-control" name="search" id="search" placeholder="search" className="form-control text-center" placeholder="Enter Any Artist to search" required onChange={event => this.setState({ query: event.target.value })} onKeyPress={event => { if (event.key === 'Enter') this.search() } } />
-                                                        
+
                                                 </div>
 
                                         </div>
                                 </div>
                                 <div className="text-center Profile row">
-                                       
-                                        <div className="col-md-4 lead Artistpic">
-                                                <img className="img-responsive img-circle" src={this.state.profilepic} alt='' />
+                                        <div className="col-md-2 ">
                                         </div>
-                                         <div className="col-md-8 Artistname">
-                                                <h3 className="lead">{this.state.artist}</h3>
-                                                <span className="label label-info">{this.state.listeners}</span>
-                                                <span className="label label-primary">{this.state.playcount}</span>
+                                        <div className="col-md-8 ">
+                                                <div className="col-md-2 lead Artistpic">
+                                                        <img className="img-responsive img-circle" src={this.state.profilepic} alt='' />
+                                                </div>
+                                                <div className="col-md-6 Artistname">
+                                                        <h3 className="lead">{this.state.artist}</h3>
+                                                        <span className="label label-info">{this.state.listeners}</span>
+                                                        <span className="label label-primary">{this.state.playcount}</span>
 
 
+                                                </div>
                                         </div>
                                 </div>
 
