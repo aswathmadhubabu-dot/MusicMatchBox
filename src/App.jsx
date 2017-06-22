@@ -48,7 +48,7 @@ class App extends Component {
                                                 console.log(json);
                                                 const tracks = json.topalbums['album'];
                                                 this.setState(tracks);
-                                                console.log(json.topalbums['album']);
+                                                console.log(tracks);
                                         });
 
 
