@@ -93,13 +93,13 @@ class App extends Component {
                                 <div className="row Gallery col-md-12">
                                 <div className="col-md-2">
                                 </div>
-                                <div className="col-md-8  text-center">
+                                <div className="col-md-8">
                                 
                                 
                                         <ul>
                                                 {
                                                         this.state.tracks.map(function (track, index) {
-                                                        return <li className = 'well' key={index}>{track.name} <a href={track.url}>Track link</a></li>;
+                                                        return <li className = 'well' key={index}><a href={track.url}>{track.name} </a></li>;
                                                 })}
                                         </ul>
                                 </div>
