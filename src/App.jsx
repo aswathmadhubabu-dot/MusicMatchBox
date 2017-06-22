@@ -41,7 +41,7 @@ class App extends Component {
                                 playcount += ' (plays total)';
                                 this.setState({ playcount });
                                 // console.log(searchArtist.tags['tag']);
-                                var albumURL = `http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${artist}&api_key=fc8abd6509fb7b91ba5628898494b3e6&format=json`;
+                                var albumURL = `http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${artist}&api_key=fc8abd6509fb7b91ba5628898494b3e6&format=json`;
                                 console.log(albumURL);
                                 fetch(albumURL, {
                                         method: 'GET'
