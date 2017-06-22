@@ -58,6 +58,10 @@ class App extends Component {
 
 
         }
+        playAudio(previewUrl){
+                var audio = new Audio(previewUrl);
+                audio.play();
+        }
         render() {
                 return (
                         <div className="text-fluid col-md-12">
