@@ -128,10 +128,8 @@ class App extends Component {
 						<ul>
 							{
 								this.state.tracks.map(function (track, index) {
-									s = track.url;
-									return <li className='well' key={index}> <img className="img-responsive imagealbum" src={track.image[0]['#text']} alt='' /><a href={track.url}>{track.name} </a><button className="btn btn-secondary" onClick={() => this.playAudio(track.url)}><i className="fa fa-play"></i></button></li>;
-								}
-								)}
+									return <li className='well' key={index}> <img className="img-responsive imagealbum" src={track.image[0]['#text']} alt='' /><a href={track.url}>{track.name} </a><button className="btn btn-secondary text-right" onClick={() => this.playAudio(track.url)}><i className="fa fa-play"></i></button></li>;
+								})}
 						</ul>
 					</div>
 					<div className="col-md-2">
