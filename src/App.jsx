@@ -53,7 +53,7 @@ class App extends Component {
 
 
                         });
-
+                        
 
         }
         render() {
@@ -89,7 +89,10 @@ class App extends Component {
                                 </div>
 
                                 <div className="row Gallery">
-
+                                        {
+                                                
+                                        
+                                        }
 
 
                                 </div>
