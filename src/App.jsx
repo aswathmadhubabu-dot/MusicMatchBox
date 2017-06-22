@@ -17,6 +17,7 @@ class App extends Component {
         search() {
                 console.log(this.state.query);
                 var baseURL = `https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${this.state.query}&api_key=fc8abd6509fb7b91ba5628898494b3e6&format=json`;
+                
                 // var finalURL = `${baseURL}q=${this.state.query}&type=artist&limit=1`;
                 console.log(baseURL);
                 fetch(baseURL, {
@@ -40,6 +41,7 @@ class App extends Component {
 
 
                         });
+                var albumURL = `http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${artist}&api_key=fc8abd6509fb7b91ba5628898494b3e6&format=json`;
         }
         render() {
                 return (
