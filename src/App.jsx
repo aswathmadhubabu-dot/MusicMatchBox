@@ -92,9 +92,11 @@ class App extends Component {
 
                                 <div className="row Gallery">
                                         <ul>
-                                                {tracks.map(function (track, index) {
-                                                        return <li key={index}>{track[index].name}</li>;
-                                                })}
+                                                { topalbums = this.state.tracks;
+                                                        topalbums.map(function (topalbum, index) {
+                                                        return <li key={index}>{topalbum[index].name}</li>;
+                                                })
+                                        }
                                         </ul>
                                 </div>
                         </div>)
