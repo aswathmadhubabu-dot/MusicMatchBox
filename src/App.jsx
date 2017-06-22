@@ -93,12 +93,18 @@ class App extends Component {
                                 <div className="row Gallery col-md-12">
                                 <div className="col-md-2">
                                 </div>
+                                <div className="col-md-8 well text-center">
+                                
+                                
                                         <ul>
                                                 {
                                                         this.state.tracks.map(function (track, index) {
                                                         return <li key={index}>{track.name}</li>;
                                                 })}
                                         </ul>
+                                </div>
+                                <div className="col-md-2">
+                                </div>
                                 </div>
                         </div>)
         };
