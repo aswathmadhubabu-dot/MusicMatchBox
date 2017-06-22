@@ -14,9 +14,9 @@ class App extends Component {
                         description: null,
                         tracks: []
                 }
-                
+
         }
-        
+
         search() {
                 console.log(this.state.query);
                 var baseURL = `https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${this.state.query}&api_key=fc8abd6509fb7b91ba5628898494b3e6&format=json`;
@@ -49,7 +49,7 @@ class App extends Component {
                                         .then(json => {
                                                 console.log(json);
                                                 const tracks = json.toptracks['track'];
-                                        this.setState({tracks});
+                                                this.setState({ tracks });
                                                 console.log(this.state.tracks);
                                         });
 
@@ -58,7 +58,7 @@ class App extends Component {
 
 
         }
-        playAudio(previewUrl){
+        playAudio(previewUrl) {
                 var audio = new Audio(previewUrl);
                 audio.play();
         }
@@ -95,20 +95,20 @@ class App extends Component {
                                 </div>
 
                                 <div className="row Gallery col-md-12">
-                                <div className="col-md-2">
-                                </div>
-                                <div className="col-md-8">
-                                
-                                
-                                        <ul>
-                                                {
-                                                        this.state.tracks.map(function (track, index) {
-                                                        return <li className = 'well' key={index}> <img className="img-responsive imagealbum" src={track.image[0]['#text']} alt='' /><a href={track.url}>{track.name} </a></li>;
-                                                })}
-                                        </ul>
-                                </div>
-                                <div className="col-md-2">
-                                </div>
+                                        <div className="col-md-2">
+                                        </div>
+                                        <div className="col-md-8">
+
+
+                                                <ul>
+                                                        {
+                                                                this.state.tracks.map(function (track, index) {
+                                                                        return <li className='well' key={index}> <img className="img-responsive imagealbum" src={track.image[0]['#text']} alt='' /><a href={track.url}>{track.name} </a><button className="btn btn-secondary"><i className="fa fa-info"></i></button></li>;
+                                                                })}
+                                                </ul>
+                                        </div>
+                                        <div className="col-md-2">
+                                        </div>
                                 </div>
                         </div>)
         };
