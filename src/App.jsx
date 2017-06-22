@@ -99,7 +99,7 @@ class App extends Component {
                                         <ul>
                                                 {
                                                         this.state.tracks.map(function (track, index) {
-                                                        return <li className = 'well' key={index}><a href={track.url}>{track.name} </a></li>;
+                                                        return <li className = 'well' key={index}> <img className="img-responsive" src={track.image[1]['#text']} alt='' /><a href={track.url}>{track.name} </a></li>;
                                                 })}
                                         </ul>
                                 </div>
