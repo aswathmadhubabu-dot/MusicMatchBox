@@ -47,7 +47,7 @@ class App extends Component {
                                         method: 'GET'
                                 }).then(response => response.json())
                                         .then(json => {
-                                                console.log(json);
+                                                console.log(JSON.parse(json));
                                                 const tracks = json.topalbums['album'];
                                         this.setState({tracks});
                                                 console.log(this.state.tracks);
@@ -94,7 +94,7 @@ class App extends Component {
                                         <ul>
                                                 {
                                                         this.state.tracks.map(function (track, index) {
-                                                        return <li value={index}>{track[index].name}</li>;
+                                                        return <li value={index}>{track[index]['name']}</li>;
                                                 })}
                                         </ul>
                                 </div>
