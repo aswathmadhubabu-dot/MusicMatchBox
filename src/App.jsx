@@ -1,3 +1,9 @@
+/*
+ * @Author: Aswath MadhuBabu 
+ * @Date: 2017-06-22 22:57:04 
+ * @Last Modified by:   Aswath MadhuBabu 
+ * @Last Modified time: 2017-06-22 22:57:04 
+ */
 // import React from 'react';
 import React, { Component } from 'react';
 import './App.css';
@@ -129,7 +135,7 @@ class App extends Component {
 							{
 								this.state.tracks.map(function (track, index) {
 									const previewurl = track.url;
-									return <li className='well' key={index}> <img className="img-responsive imagealbum" src={track.image[0]['#text']} alt='' /><a href={track.url}>{track.name} </a><button className="btn btn-secondary text-right" onClick={() => this.playAudio('https://www.last.fm/music/SoBi/_/Just+Like+You+-+Original+Mixwurl')}><i className="fa fa-play"></i></button></li>;
+									return <li className='well' key={index}> <img className="img-responsive imagealbum" src={track.image[0]['#text']} alt='' /><a href={track.url}>{track.name} </a></li>;
 								})}
 						</ul>
 					</div>
