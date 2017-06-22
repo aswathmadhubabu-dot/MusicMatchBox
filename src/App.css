@@ -76,3 +76,10 @@ img
         border-radius: 75px;
         object-fit: cover;
 }
+.imagealbum
+ {
+    width:70px;
+    height:70px;
+    display: inline-block;
+    margin-right: 4%;
+}
