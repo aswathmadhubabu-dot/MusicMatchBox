@@ -59,7 +59,7 @@ class App extends Component {
                 return (
                         <div className="text-fluid col-md-12">
 
-                                <div className="">
+                                <div className="row">
                                         <div className="col-md-4 col-md-offset-3">
 
                                                 <div className="form-group has-feedback">
@@ -71,19 +71,20 @@ class App extends Component {
                                         </div>
                                 </div>
                                 <div className="text-center Profile row">
-                                        <div className="col-md-8 Artistname">
+                                       
+                                        <div className="col-md-4 lead Artistpic">
+                                                <img className="avatar img-responsive img-circle" src={this.state.profilepic} alt='' />
+                                        </div>
+                                         <div className="col-md-8 Artistname">
                                                 <h3 className="lead">{this.state.artist}</h3>
                                                 <span className="label label-info">{this.state.listeners}</span>
                                                 <span className="label label-primary">{this.state.playcount}</span>
 
 
                                         </div>
-                                        <div className="col-md-4 lead Artistpic">
-                                                <img className="avatar img-responsive img-circle" src={this.state.profilepic} alt='' />
-                                        </div>
                                 </div>
 
-                                <div className="row tags">
+                                <div className="row Gallery">
 
 
                                 </div>
