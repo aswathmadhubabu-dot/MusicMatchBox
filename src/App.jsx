@@ -45,15 +45,15 @@ class App extends Component {
                                         method: 'GET'
                                 }).then(response => response.json())
                                         .then(json => {
-                                                console.log(this.props);
-                                                const {tracks} = this.props;
-                                                this.setState(this.props);
+                                                console.log(json);
+                                                const tracks = json.topalbums['album'];
+                                                this.setState(tracks);
                                                 console.log(json.topalbums['album']);
                                         });
 
 
                         });
-                        
+
 
         }
         render() {
@@ -89,10 +89,7 @@ class App extends Component {
                                 </div>
 
                                 <div className="row Gallery">
-                                        {
-                                                
-                                        
-                                        }
+
 
 
                                 </div>
