@@ -71,11 +71,11 @@ class App extends Component {
                                         </div>
                                 </div>
                                 <div className="text-center Profile row">
-                                        <div className="col-md-2 ">
+                                        <div className="col-md-3 ">
                                         </div>
                                         <div className="col-md-8 ">
                                                 <div className="col-md-2 lead Artistpic">
-                                                        <img className="img-responsive img-circle" src={this.state.profilepic} alt='' />
+                                                        <img className="img-responsive" src={this.state.profilepic} alt='' />
                                                 </div>
                                                 <div className="col-md-6 Artistname">
                                                         <h3 className="lead">{this.state.artist}</h3>
