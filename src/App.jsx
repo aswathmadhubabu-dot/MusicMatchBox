@@ -11,7 +11,8 @@ class App extends Component {
                         profilepic: null,
                         listeners: null,
                         playcount: null,
-                        description: null
+                        description: null,
+                        tracks:null
                 }
         }
         search() {
@@ -45,6 +46,8 @@ class App extends Component {
                                 }).then(response => response.json())
                                         .then(json => {
                                                 console.log(json);
+                                                const {tracks} = json;
+                                                this.setState(tracks);
                                         });
 
 
