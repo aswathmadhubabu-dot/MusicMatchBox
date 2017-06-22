@@ -90,7 +90,7 @@ class App extends Component {
 
                                 <div className="row Gallery">
 
-
+                                
 
                                 </div>
                         </div>)
