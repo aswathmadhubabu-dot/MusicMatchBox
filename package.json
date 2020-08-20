@@ -18,5 +18,5 @@
     "eject": "react-scripts eject",
     "deploy": "npm run build&&gh-pages -d build"
   },
-  "homepage": "https://ases573.github.io/MusicMatchBox"
+  "homepage": "https://aswathmadhubabu-dot.github.io/MusicMatchBox"
 }
